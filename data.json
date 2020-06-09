@@ -1,0 +1,29 @@
+{
+    "codegymers": [
+        {
+            "name": "Quốc Lân",
+            "age": 23,
+            "email": "lan@codegym.vn"
+        },
+        {
+            "name": "Anh Đức",
+            "age": 25,
+            "email": "duc@codegym.vn"
+        },
+        {
+            "name": "Văn Thanh",
+            "age": 18,
+            "email": "thanh@codegym.vn"
+        },
+        {
+            "name": "Nguyễn Văn Đạt",
+            "age": 22,
+            "email": "dat@codegym.vn"
+        },
+        {
+            "name": "Trần Văn Thạnh",
+            "age": 13,
+            "email": "thanh@codegym.vn"
+        }
+    ]
+}
