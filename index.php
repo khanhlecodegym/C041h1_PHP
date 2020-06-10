@@ -1,8 +1,8 @@
 <?php require_once 'layouts/header.php' ?>
 
 <?php 
-session_start();
-print_r($_SESSION['arrNum']);
+// session_start();
+// print_r($_SESSION['arrNum']);
     if(isset($_POST["name"])) {
         $jsonData = file_get_contents('data.json');
         $data = json_decode($jsonData, true);
