@@ -16,7 +16,7 @@ class UserDAO
         $statement->bindParam(1, $user->email);
         $statement->bindParam(2, $user->password);
         $statement->execute();
-        $result = $statement->rowCount();
+        $result = $statement->fetchAll(PDO::FETCH_CLASS);
         return $result;
     }
 }
