@@ -3,9 +3,19 @@
 require_once 'core/Request.php';
 require_once 'core/Router.php';
 
-// require_once 'controller/PageController.php';
+function view($name, $data = []) 
+{
+    extract($data);
 
-require Router::load('routes.php')
+    return require "view/{$name}.php";
+}
+
+function redirect($path = null)
+{
+    header("Location: /{$path}");
+}
+
+Router::load('routes.php')
     ->direct(Request::uri(), Request::method());
 
 ?>

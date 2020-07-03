@@ -4,13 +4,23 @@ require_once 'model/DbConnection.php';
 require_once 'model/User.php';
 require_once 'model/UserDAO.php';
 
-$userDAO = new UserDAO(DbConnection::make());
-$user = new User(1, 'haha@123.com', '1234567890');
-$result = $userDAO->login($user);
+class PageController
+{
+    public function home()
+    {
+        $userDAO = new UserDAO(DbConnection::make());
 
-if($result) {
-    require_once 'view/admin/dashboard.php';
-    // echo 'Login thành công';
-} else {
-    echo 'Sai thông tin tài khoản';
+        $user = new User(1, $_POST['email'], $_POST['password']);
+        $result = $userDAO->login($user);
+        if ($result) {
+            return view('admin/dashboard');
+        } else {
+            echo 'Sai thông tin tài khoản';
+        }
+    }
+
+    public function login()
+    {
+        return view('admin/login');
+    }
 }
